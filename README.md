@@ -1,48 +1,47 @@
 Pretty-prints a binary tree with child fields `left` and `right`. Each node contains a `data` field, which is printed.
 
-Run `python tree.py` and check out the results.
+Run `python test_nodes.py` and check out the results.
 
 The tree may be of any depth, but usually after 6 levels it's too wide for most screens.
 
 Looks best when the nodes' printed values are under 3 characters long (especially on leaf nodes).
 
+Is now ported on Python 3.
+
 ```python
 # prep the tree...
-# 
+#
+
 # layer 1
-root = Node('A')
+root = my_node('+')
 
 # layer 2
-root.left = Node('B')
-root.right = Node('C')
+root.left = my_node('*')
+root.right = my_node('/')
 
 # layer 3
-root.left.left = Node('D')
-root.left.right = Node('E')
-
-# add a sub-tree ('X' nodes) using the createTree method
-root.left.right.right = Node.createTree(2)
-
-root.right.left = Node('F')
-root.right.right = Node('G')
+root.left.left = my_node('2')
+root.left.right = my_node('+')
+root.right.left = my_node('!')
+root.right.right = my_node('6')
 
 # layer 3
-root.left.left.left = Node('H')
-root.left.left.right = Node('I')
-root.left.right.left = Node('J')
-root.right.right.left = Node('N')
-root.right.right.right = Node('O')
+root.left.right.left = my_node('3')
+root.left.right.right = my_node('12')
+root.right.left.left = my_node('22')
 
-root.prettyPrint()
+big_node = my_node("=",my_node("a"),root)
+
+big_node.printTree()
 
 
 ```
-                  ______________A______________ 
+                  ______________=______________
                  /                             \
-          ______B______                   ______C______ 
-         /             \                 /             \
-      __D__           __E__             F             __G__ 
-     /     \         /     \                         /     \
-    H       I       J       X                       N       O 
-                           / \                                
-                          X  XX                                
+                a                         ______+______
+                                         /             \
+                                      __*__           __/__
+                                     /     \         /     \
+                                    2       +       !       6
+                                           / \     /
+                                          3  12  22
