@@ -9,11 +9,11 @@
 #
 # 13.02.2019 by therealpeterpython 
 
-from __future__ import print_function
+from __future__ import print_function   # necessary for py2/3 compatibility
 
-try:
+try:    # necessary for py2/3 compatibility
     from queue import Queue
-except: # not sure if this is necessary 
+except:
     from Queue import Queue
 
 from copy import deepcopy as deepcopy
