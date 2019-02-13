@@ -9,6 +9,8 @@
 #
 # 13.02.2019 by therealpeterpython 
 
+from __future__ import print_function
+
 try:
     from queue import Queue
 except: # not sure if this is necessary 

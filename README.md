@@ -6,7 +6,7 @@ The tree may be of any depth, but usually after 6 levels it's too wide for most 
 
 Looks best when the nodes' printed values are under 3 characters long (especially on leaf nodes).
 
-Is now ported on Python 3.
+Is now ported to Python 3 (but still Python 2 compatible).
 
 ```python
 # prep the tree...
