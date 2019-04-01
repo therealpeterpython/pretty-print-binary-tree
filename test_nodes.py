@@ -7,12 +7,12 @@ import tree_pprint
 class my_node:
     def __init__(self, own = None, left = None, right = None, parent = None):
         self.own = own      # data attribute
-        self.left_node = left
-        self.right_node = right
+        self.left = left
+        self.right = right
         self.parent = parent
 
     def printTree(self):
-        tree_pprint.pprint(self, "own", "left_node", "right_node")
+        tree_pprint.pprint(self, "own", "left", "right")
     
     
 

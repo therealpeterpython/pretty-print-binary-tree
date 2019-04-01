@@ -1,10 +1,7 @@
 # This script was originally writen by jdmcpee (https://github.com/jdmcpeek/pretty-print-binary-tree)
-# I rewrite some parts for bug fixing and port it to Python 3.
+# I rewrite some parts for bug fixing and ported it to Python 3.
 #
-# If you want to pretty print your tree, just import this file in your script 
-# (import tree_pprint) and use 
-# tree_pprint.pprint(your_root_node, your_name_attr_data, your_name_attr_left, your_name_attr_right)
-# with the standard values your_name_attr_data="data", name_attr_left = "left", name_attr_right = "right".
+# For a detailed explanation please read the Readme.
 # 
 # For an example see the test_nodes.py.
 #
@@ -36,7 +33,7 @@ def convert_tree(external_node, data_attr_name = "data", left_attr_name = "left"
         node_left = getattr(external_node, left_attr_name)
         node_right = getattr(external_node, right_attr_name)
         internal_node = Node(node_data, convert_tree(node_left, data_attr_name, left_attr_name, right_attr_name), convert_tree(node_right, data_attr_name, left_attr_name, right_attr_name))
-        return internal_node
+    return internal_node
 
 class Node:
     def __init__(self, data = None, left = None, right = None):
