@@ -3,7 +3,8 @@
 #
 # If you want to pretty print your tree, just import this file in your script 
 # (import tree_pprint) and use 
-# tree_pprint.pprint(your_root_node, your_name_attr_data, your_name_attr_left, your_name_attr_right).
+# tree_pprint.pprint(your_root_node, your_name_attr_data, your_name_attr_left, your_name_attr_right)
+# with the standard values your_name_attr_data="data", name_attr_left = "left", name_attr_right = "right".
 # 
 # For an example see the test_nodes.py.
 #
