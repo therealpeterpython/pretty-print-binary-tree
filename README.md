@@ -1,4 +1,4 @@
-Pretty-prints a binary tree with nodes with two child fields and a data field.
+Pretty-prints a binary tree of nodes with two child fields and a data field.
 You can use it as method in your code like this: 
 ```
 import tree_pprint
