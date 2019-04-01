@@ -2,17 +2,17 @@
 #
 # 13.02.2019 by therealpeterpython
 
-import tree_pprint as tree_pprint
+import tree_pprint
 
 class my_node:
     def __init__(self, own = None, left = None, right = None, parent = None):
-        self.own = own
+        self.own = own      # data attribute
         self.left = left
         self.right = right
         self.parent = parent
 
     def printTree(self):
-        tree_pprint.pprint(self, "own")
+        tree_pprint.pprint(self, "own") # data attribute has an other name than 'data'
     
     
 
