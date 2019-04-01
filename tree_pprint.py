@@ -20,22 +20,22 @@ except:
 from copy import deepcopy as deepcopy
 import sys
 
-# 'name_attr_data' is the name of the data attribute
-# 'name_attr_left' is the name of the left sub node attribute 
-# 'name_attr_right' is the name of the right sub node attribute
+# 'data_attr_name' is the name of the data attribute
+# 'left_attr_name' is the name of the left sub node attribute 
+# 'right_attr_name' is the name of the right sub node attribute
 #
-def pprint(external_node, name_attr_data = "data", name_attr_left = "left", name_attr_right = "right"):
-    internal_node = convert_tree(external_node, name_attr_data, name_attr_left, name_attr_right)
+def pprint(external_node, data_attr_name = "data", left_attr_name = "left", right_attr_name = "right"):
+    internal_node = convert_tree(external_node, data_attr_name, left_attr_name, right_attr_name)
     internal_node.prettyPrint()
     
-def convert_tree(external_node, name_attr_data = "data", name_attr_left = "left", name_attr_right = "right"):
+def convert_tree(external_node, data_attr_name = "data", left_attr_name = "left", right_attr_name = "right"):
     if not external_node:
         internal_node = None
     else:
-        node_data = getattr(external_node, name_attr_data)
-        node_left = getattr(external_node, name_attr_left)
-        node_right = getattr(external_node, name_attr_right)
-        internal_node = Node(node_data, convert_tree(node_left, name_attr_data, name_attr_left, name_attr_right), convert_tree(node_right, name_attr_data, name_attr_left, name_attr_right))
+        node_data = getattr(external_node, data_attr_name)
+        node_left = getattr(external_node, left_attr_name)
+        node_right = getattr(external_node, right_attr_name)
+        internal_node = Node(node_data, convert_tree(node_left, data_attr_name, left_attr_name, right_attr_name), convert_tree(node_right, data_attr_name, left_attr_name, right_attr_name))
         return internal_node
 
 class Node:
