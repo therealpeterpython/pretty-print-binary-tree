@@ -1,18 +1,18 @@
 # Example of how to use tree_pprint
 #
-# 13.02.2019 by therealpeterpython
+# By therealpeterpython
 
 import tree_pprint
 
 class my_node:
     def __init__(self, own = None, left = None, right = None, parent = None):
         self.own = own      # data attribute
-        self.left = left
-        self.right = right
+        self.left_node = left
+        self.right_node = right
         self.parent = parent
 
     def printTree(self):
-        tree_pprint.pprint(self, "own") # data attribute has an other name than 'data'
+        tree_pprint.pprint(self, "own", "left_node", "right_node")
     
     
 
